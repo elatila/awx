@@ -1,0 +1,15 @@
+<html>
+ <head>
+  <title>Web Server con AWX</title>
+ </head>
+ <body>
+ </br>
+  <a href=http://{{ ansible_default_ipv4.address }}/index.html>Homepage</a>
+ </br>
+<?php 
+ Print "Hola, Mundo! Soy un web server configurado por Ansible y AWX, soy : ";
+ echo exec('hostname');
+?>
+</body>
+</html>
+

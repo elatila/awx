@@ -1,0 +1,11 @@
+- name: Aplicar a los nodos las configuraciones
+  hosts: all
+
+  roles:
+    - configuraciones
+
+- name: Configurar y desplegar httpd y codigo
+  hosts: all
+
+  roles:
+    - web
