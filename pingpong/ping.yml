@@ -1,5 +1,5 @@
 - name: Test ping con AWX
-  hosts: db
+  hosts: all
 
   tasks:
   - name: Ping
