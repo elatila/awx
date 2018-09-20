@@ -1,0 +1,7 @@
+---
+- name: Instala un paquete
+  hosts: all
+  tasks:
+     - name: Instala paquete seleccionado
+       yum: name={{ paqueterpm }} state=latest
+
