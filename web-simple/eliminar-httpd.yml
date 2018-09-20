@@ -1,0 +1,11 @@
+- name: Eliminar httpd
+  hosts: all
+  tasks:
+    - name: Parar y deshabilitar servicio http
+      service: name=httpd state=stopped enabled=no
+
+    - name: Desinstalar httpd
+      yum: name=httpd state=absent
+
+    - name: Quitar regla de firewalld  para httpd
+      firewalld: service=http permanent=false state=disabled immediate=yes
